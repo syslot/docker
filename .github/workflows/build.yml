@@ -3,7 +3,7 @@ name: build
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [rc]
 
 jobs:
   image:
@@ -20,7 +20,4 @@ jobs:
         file: ./pylucene/Dockerfile
         push: true
         tags: |
-          coady/pylucene:latest
-          coady/pylucene:8
-          coady/pylucene:8.9
-          coady/pylucene:8.9.0
+          coady/pylucene:rc
